@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title> <!-- Giữ thẻ, bỏ nội dung -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="CK.css">
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar (chỉ giữ cấu trúc + biến) -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+       href="javascript:void(0)" onclick="myFunction()" aria-label="Toggle Navigation Menu">
+       <i class="fa fa-bars"></i></a>
+
+    <!-- Các nút menu (nội dung để trống) -->
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large"></a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></a>
+
+    <!-- Dropdown giữ nguyên -->
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button"></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#merch" class="w3-bar-item w3-button"></a>
+        <a href="#extras" class="w3-bar-item w3-button"></a>
+        <a href="#media" class="w3-bar-item w3-button"></a>
+      </div>
+    </div>
+
+    <!-- Search toggle -->
+    <a href="javascript:void(0)" class="w3-padding-large w3-hide-small w3-right"
+       onclick="toggleSearch()" aria-label="Search"><i class="fa fa-search"></i></a>
+
+    <div id="searchForm" class="w3-hide"
+         style="position:absolute; right:0; top:46px; background:white; padding:10px; border:1px solid #ccc;">
+      <input type="text" placeholder="">
+      <button class="w3-button w3-black"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar nhỏ -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+     style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"></a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"></a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"></a>
+  <a href="#merch" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"></a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px" id="home">
+
+  <!-- Slideshow (giữ khung, bỏ ảnh & text) -->
+  <div class="mySlides w3-display-container w3-center">
+    <!-- ảnh bỏ -->
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small"></div>
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small"></div>
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small"></div>
+  </div>
+
+  <!-- Band Section (bỏ text, giữ cấu trúc) -->
+  <div class="w3-container w3-content w3-center w3-padding-64" id="band">
+    <h2 class="w3-wide"></h2>
+    <p class="w3-opacity"></p>
+    <p class="w3-justify"></p>
+
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p></p>
+        <img class="w3-round w3-margin-bottom" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p></p>
+        <img class="w3-round w3-margin-bottom" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p></p>
+        <img class="w3-round" style="width:60%">
+      </div>
+    </div>
+  </div>
+
+  <!-- Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64">
+      <h2 class="w3-wide w3-center"></h2>
+      <p class="w3-opacity w3-center"></p>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding"></li>
+        <li class="w3-padding"></li>
+        <li class="w3-padding"></li>
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32">
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+            <p></p>
+            <p class="w3-opacity"></p>
+            <p></p>
+            <button class="w3-button w3-black w3-margin-bottom"
+                    onclick="openTicketModal('')"></button>
+          </div>
+        </div>
+
+        <!-- Lặp tương tự 2 ô còn lại -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal" aria-hidden="true">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32">
+        <span onclick="closeTicketModal()" class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 id="modalTitle" class="w3-wide">
+          <span id="eventName"></span>
+        </h2>
+      </header>
+
+      <div class="w3-container">
+        <form id="ticketForm" onsubmit="handleTicketSubmit(event)">
+          <label></label>
+          <input id="ticketQty" class="w3-input w3-border" type="number">
+
+          <label></label>
+          <input id="ticketEmail" class="w3-input w3-border" type="email">
+
+          <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right"></button>
+          <button class="w3-button w3-red w3-section" type="button" onclick="closeTicketModal()"></button>
+          <p class="w3-right"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" id="contact">
+    <h2 class="w3-wide w3-center"></h2>
+    <p class="w3-opacity w3-center"></p>
+
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom"></div>
+
+      <div class="w3-col m6">
+        <form>
+          <div class="w3-row-padding">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text">
+          <button class="w3-button w3-black w3-section w3-right"></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Map (giữ thẻ, bỏ ảnh) -->
+<img class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a><i class="fa-brands fa-facebook w3-hover-opacity"></i></a>
+  <a><i class="fa-brands fa-instagram w3-hover-opacity"></i></a>
+  <a><i class="fa-brands fa-snapchat w3-hover-opacity"></i></a>
+  <a><i class="fa-brands fa-pinterest w3-hover-opacity"></i></a>
+  <a><i class="fa-brands fa-twitter w3-hover-opacity"></i></a>
+  <a><i class="fa-brands fa-linkedin w3-hover-opacity"></i></a>
+  <p class="w3-medium"></p>
+</footer>
+
+<script>
+// *** Toàn bộ biến & hàm giữ nguyên ***
+
+let myIndex = 0;
+const slides = document.getElementsByClassName("mySlides");
+
+function carousel() {
+  if (slides.length === 0) return;
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  myIndex = (myIndex + 1) % slides.length;
+  slides[myIndex].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+
+function myFunction() {
+  const x = document.getElementById("navDemo");
+  if (x) x.classList.toggle("w3-show");
+}
+
+function toggleSearch() {
+  const form = document.getElementById("searchForm");
+  if (form) form.classList.toggle("w3-hide");
+}
+
+function openTicketModal(eventName) {
+  document.getElementById("eventName").textContent = eventName;
+  document.getElementById("ticketModal").style.display = "block";
+  document.getElementById("ticketModal").setAttribute("aria-hidden", "false");
+}
+
+function closeTicketModal() {
+  document.getElementById("ticketModal").style.display = "none";
+  document.getElementById("ticketModal").setAttribute("aria-hidden", "true");
+}
+
+function handleTicketSubmit(event) {
+  event.preventDefault();
+  closeTicketModal();
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('ticketModal');
+  if (event.target === modal) closeTicketModal();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  carousel();
+});
+</script>
+
+</body>
+</html>
